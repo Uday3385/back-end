@@ -56,8 +56,8 @@ jobs:
 
       - name: Update Auto Scaling Group
         env:
-          AUTO_SCALING_GROUP_NAME: WEB-Server
-          LAUNCH_TEMPLATE_NAME: Web-Server
+          AUTO_SCALING_GROUP_NAME: APP-Server
+          LAUNCH_TEMPLATE_NAME: App-Server
         run: |
           aws autoscaling update-auto-scaling-group --auto-scaling-group-name $AUTO_SCALING_GROUP_NAME --region ${{ env.AWS_REGION }} --launch-template LaunchTemplateName=$LAUNCH_TEMPLATE_NAME
 
