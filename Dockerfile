@@ -16,10 +16,10 @@ RUN npm install --only=prod
 COPY . .
 
 # Build the Next.js application
-RUN npm run build
+#RUN npm run build
 
 # Expose the desired port (change it to match the port used by your app)
-EXPOSE 3000
+EXPOSE 3001
 
 # Set the command to run the application
-CMD ["npm", "start"]
+CMD ["node", "src/start.js"]
